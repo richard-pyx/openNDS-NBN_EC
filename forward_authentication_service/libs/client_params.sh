@@ -153,14 +153,14 @@ header() {
 		<meta http-equiv=\"Expires\" content=\"0\">
 		<meta charset=\"utf-8\">
 		<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
-		<link rel=\"shortcut icon\" href=\"$url/$imagepath\" type=\"image/x-icon\">
+		<link rel=\"shortcut icon\" href=\"$url/ndsremote/banner1.jpg\" type=\"image/x-icon\">
 		<link rel=\"stylesheet\" type=\"text/css\" href=\"$url/splash.css\">
-		<title>$gatewaynamehtml Client Session Status</title>
+		<title>$gatewaynamehtml Cliente Seção Status</title>
 		</head>
 		<body>
 		<div class=\"offset\">
 		<big-red>
-			Session Status<br>
+			Seção Status<br>
 		</big-red>
 		<med-blue>
 			$gatewaynamehtml
@@ -177,10 +177,11 @@ footer() {
 		<hr>
 		<div style=\"font-size:0.5em;\">
 			<br>
-			<img style=\"height:60px; float:left;\" src=\"$url/$imagepath\" alt=\"Splash Page: For access to the Internet.\">
-			&copy; Portal: BlueWave Projects and Services 2015 - $year<br>
+			<img style=\"height:60px; float:left;\" src=\"$url/ndsremote/banner2.jpg\" alt=\"Splash Page: For access to the Internet.\">
+			&copy; Portal: NBN Telecom - 2005 - $year<br>
 			<br>
 			Portal Version: $version
+			<p style=\"font-size:0.3em \"> Developers: Wellyson Yago Monteiro da Silva - Richard de Sousa Oliveira </p>
 			<br><br><br><br>
 		</div>
 		</div>
@@ -194,7 +195,7 @@ body() {
 	if [ "$ndsstatus" = "busy" ]; then
 		pagebody="
 			<hr>
-			<b>The Portal is busy, please click or tap \"Refresh\"<br><br></b>
+			<b>O portal está ocupado, por favor, clique ou toque. \"Refresh\"<br><br></b>
 			<form>
 				<input type=\"button\" VALUE=\"Refresh\" onClick=\"history.go(0);return true;\">
 			</form>
@@ -222,7 +223,7 @@ body() {
 
 			<form action=\"$url/\" method=\"get\">
 				<input type=\"checkbox\" value=\"checked\" name=\"advanced\" $checked >
-				Select and click Refresh to see Advanced Account Details<br>
+				Selecione e clique em Atualizar para ver os Detalhes Avançados da Conta.<br>
 				<input type=\"submit\" value=\"Refresh\" >
 			</form>
 		"
