@@ -49,7 +49,7 @@ header() {
 		<meta http-equiv=\"Expires\" content=\"0\">
 		<meta charset=\"utf-8\">
 		<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
-		<link rel=\"shortcut icon\" href=\"$gatewayurl/images/splash.jpg\" type=\"image/x-icon\">
+		<link rel=\"shortcut icon\" href=\"$gatewayurl/ndsremote/banner1.jpg\" type=\"image/x-icon\">
 		<link rel=\"stylesheet\" type=\"text/css\" href=\"$gatewayurl/splash.css\">
 		<title>$gatewayname</title>
 		</head>
@@ -71,7 +71,7 @@ footer() {
 		<hr>
 		<div style=\"font-size:0.5em; display:flex; flex-direction: column;\">
 			<br>
-			<img style=\"height:60px; float:left;\" src=\"$gatewayurl""$logo\" alt=\"Splash Page: For access to the Internet.\">
+			<img style=\"height:60px; width:full;\" src=\"$gatewayurl""$banner2\" alt=\"Splash Page: For access to the Internet.\">
 			&copy; Portal: NBN Telecom - 2005 - $year<br>
 			<br>
 			Portal Version: $version
@@ -110,7 +110,7 @@ continue_form() {
 
 	echo "
 		<big-red>Bem Vindo!</big-red><br>
-		<img style=\"width:100%; max-width: 100%;\" src=\"$banner1\" alt=\"Placeholder: Banner1.\"><br>
+		<img style=\"width:30%; max-width: 30%;\" src=\"$gatewayurl""$banner1\" alt=\"Placeholder: Banner1.\"><br>
 		<b>$banner1_message</b><hr>
 		<med-blue>Você está conectado em: <br>$client_zone</med-blue><br>
 		<italic-black>
@@ -121,7 +121,7 @@ continue_form() {
 			<input type=\"hidden\" name=\"fas\" value=\"$fas\">
 			<input type=\"hidden\" name=\"continue\" value=\"clicked\">
 			$custom_inputs
-			<input type=\"submit\" value=\"Accept Terms of Service\" >
+			<input type=\"submit\" value=\"Aceitar Termos de Serviços\" >
 		</form>
 		<br>
 	"
@@ -170,7 +170,7 @@ thankyou_page () {
 	echo "
 		<br>
 		<italic-black>
-			<img style=\"width:100%; max-width: 100%;\" src=\"$banner2\" alt=\"Placeholder: Banner2.\"><br>
+			<img style=\"width:30%; max-width: 30%;\" src=\"$gatewayurl""$banner1\" alt=\"Placeholder: Banner2.\"><br>
 			<b>$banner2_message</b><br>
 			$advert1
 			<hr>
@@ -223,8 +223,8 @@ landing_page() {
 				Você está agora logado e recebeu acesso à Internet.
 			</big-red>
 			<hr>
-			<img style=\"width:100%; max-width: 100%;\" src=\"$banner3\" alt=\"Placeholder: Banner3.\"><br>
-			<b>$banner3_message</b><br>
+			<img style=\"width:20%; max-width: 20%;\" src=\"$gatewayurl""$banner1\" alt=\"Placeholder: Banner3.\"><br>
+			<b>$banner1_message</b><br>
 		</p>
 		<hr>
 		<p>
@@ -245,8 +245,8 @@ landing_page() {
 				Algo deu errado e você não conseguiu fazer login.
 			</big-red>
 			<hr>
-			<img style=\"width:100%; max-width: 100%;\" src=\"$banner3\" alt=\"Placeholder: Banner1.\"><br>
-			<b>$banner3_message</b><br>
+			<img style=\"width:20%; max-width: 20%;\" src=\"$gatewayurl""$banner1\" alt=\"Placeholder: Banner1.\"><br>
+			<b>$banner1_message</b><br>
 		</p>
 
 		<p>
@@ -281,7 +281,7 @@ read_terms() {
 			<input type=\"hidden\" name=\"fas\" value=\"$fas\">
 			$custom_passthrough
 			<input type=\"hidden\" name=\"terms\" value=\"yes\">
-			<input type=\"submit\" value=\"Read Terms of Service   \" >
+			<input type=\"submit\" value=\"Ler Termos de Serviço   \" >
 		</form>
 	"
 }
@@ -298,17 +298,25 @@ display_terms() {
 	#Privacy
 	echo "
 		<b style=\"color:red;\">Privacidade.</b><br>
+
+		<div style=\"text-align: justify; line-height: 1.5; \"> 
+
 		<b>
 			Ao fazer login no sistema, você concede permissão para que este sistema armazene quaisquer dados que você fornecer para fins de login, juntamente com os parâmetros de rede do seu dispositivo que o sistema necessita para funcionar.
 			Todas as informações são armazenadas para sua conveniência e para a proteção tanto sua quanto nossa.
 			Todas as informações coletadas por este sistema são armazenadas de forma segura e não são acessíveis por terceiros.
 			Em troca, concedemos a você acesso gratuito à Internet.
-		</b><hr>
+		</b>
+		
+		</div>
+		<hr>
 	"
 
 	# Terms of Service
 	echo "
 		<b style=\"color:red;\">Termo de Aceite para Utilização do Serviço Wi-Fi.</b> <br>
+		
+		<div style=\"text-align: justify; line-height: 1.5; \"> 
 
 		<p>O serviço Wi-Fi é provido e de responsabilidade da Associação Administradora da Conectividade de Escolas EACE, inscrita no CNPJ/MF sob o N. 45.726.363/0001-47.
 
@@ -327,7 +335,9 @@ display_terms() {
 		A EACE não realiza o compartilhamento dos dados pessoais com terceiros, contudo, em casos que seja destinatária de requisições de informações solicitadas por autoridades competentes, os dados pessoais 
 		
 		poderão ser compartilhados com estes órgãos, com fins de cumprimento de medidas legais ou regulatórias.</p><hr>
-
+		
+		</div>
+		
 		<b>Ao prosseguir, declaro estar ciente das condições de tratamento dos meus dados pessoais, conforme descrito no aviso de privacidade do serviço Wi-Fi na instituição.</b>
 
 		<form>
@@ -338,6 +348,8 @@ display_terms() {
 	# Proper Use
 	echo "
 		<hr> **Uso Adequado** 
+		<div style=\"text-align: justify; line-height: 1.5; \"> 
+
 		<p> Este Hotspot fornece uma rede sem fio que permite a conexão à Internet. 
 		<b>O uso desta conexão à Internet é fornecido em troca da sua TOTAL aceitação destes Termos de Serviço.</b> ]
 		</p> 
@@ -370,11 +382,15 @@ display_terms() {
 		<li>Usar o Serviço para qualquer finalidade ilegal, assediosa, abusiva, criminosa ou fraudulenta.
 		</li> 
 		</ol>
+
+		</div>
 	"
 
 	# Content Disclaimer
 	echo "
 		<hr> **Isenção de Responsabilidade sobre Conteúdo** 
+		<div style=\"text-align: justify; line-height: 1.5; \"> 
+
 		<p> Os Proprietários do Hotspot não controlam e não são responsáveis por dados, conteúdos, serviços ou produtos acessados ou baixados por meio do Serviço. Os Proprietários podem, mas não são obrigados a, bloquear transmissões de dados para proteger a si mesmos e ao público. 
 		</p>
 		
@@ -390,12 +406,16 @@ display_terms() {
 		Os detalhes de login e as identidades dos dispositivos podem ser armazenados e utilizados como prova em um Tribunal de Justiça contra tais usuários.
 		
 		<br>
+
+		</div>
 	"
 
 	# Limitation of Liability
 	echo "
 
 		<hr> **Limitação de Responsabilidade** 
+
+		<div style=\"text-align: justify; line-height: 1.5; \"> 
 		
 		<p> Em nenhuma circunstância os Proprietários, seus fornecedores ou licenciadores serão responsáveis perante qualquer usuário ou terceiro pelo uso indevido ou pela confiança no Serviço. </p> 
 		
@@ -404,17 +424,22 @@ display_terms() {
 		<p> Podemos modificar ou encerrar o Serviço, bem como estes Termos de Serviço e quaisquer políticas associadas, por qualquer motivo e sem aviso prévio, incluindo o direito de encerramento com ou sem aviso, sem qualquer responsabilidade para com você, qualquer usuário ou terceiros. Revise estes Termos de Serviço periodicamente para estar ciente de quaisquer alterações. </p> 
 		
 		<p> Reservamo-nos o direito de encerrar seu uso do Serviço, por qualquer motivo e sem aviso prévio. Com tal rescisão, todos os direitos concedidos a você pelo Proprietário deste Hotspot serão revogados. </p>
+
+		</div>
 	"
 
 	# Indemnity
 	echo "
 		<hr> **Indenização** 
+
+		<div style=\"text-align: justify; line-height: 1.5; \"> 
 		
 		<p> **Você concorda** em isentar e indenizar os Proprietários deste Hotspot, seus fornecedores e licenciadores 
 		de qualquer reclamação de terceiros decorrente ou de alguma forma relacionada ao seu uso do Serviço, incluindo qualquer 
 		responsabilidade ou despesa resultante de todas as reclamações, perdas, danos (reais e consequenciais), processos, julgamentos, custos de litígio e honorários advocatícios, 
 		de qualquer tipo e natureza. </p>
 
+		</div>
 		<hr>
 		<form>
 			<input type=\"button\" VALUE=\"Continue\" onClick=\"history.go(-1);return true;\">
