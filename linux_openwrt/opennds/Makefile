@@ -10,7 +10,7 @@ PKG_VERSION:=1.0.1
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
-PKG_SOURCE_URL:=https://codeload.github.com/richard-pyx/openNDS-NBN_EC/tar.gz/refs/tags/v1.0.1
+PKG_SOURCE_URL:=https://github.com/richard-pyx/openNDS-NBN_EC/archive/refs/tags/v1.0.1.tar.gz
 PKG_HASH:=#shasum -a 256 of tar.gz of source files goes here
 PKG_BUILD_DIR:=$(BUILD_DIR)/openNDS-$(PKG_VERSION)
 
