@@ -69,12 +69,14 @@ footer() {
 	year=$(date +'%Y')
 	echo "
 		<hr>
-		<div style=\"font-size:0.5em;\">
+		<div style=\"font-size:0.5em; display:flex; flex-direction: column;\">
 			<br>
 			<img style=\"height:60px; float:left;\" src=\"$gatewayurl""$logo\" alt=\"Splash Page: For access to the Internet.\">
-			&copy; Portal: BlueWave Projects and Services 2015 - $year<br>
+			&copy; Portal: NBN Telecom - 2005 - $year<br>
 			<br>
 			Portal Version: $version
+			<br>
+			<p style=\"font-size:0.3em \"> Developers: Wellyson Yago Monteiro da Silva - Richard de Sousa Oliveira </p>
 			<br><br><br><br>
 		</div>
 		</div>
@@ -107,12 +109,12 @@ continue_form() {
 	banner1_message="$urldecoded"
 
 	echo "
-		<big-red>Welcome!</big-red><br>
+		<big-red>Bem Vindo!</big-red><br>
 		<img style=\"width:100%; max-width: 100%;\" src=\"$banner1\" alt=\"Placeholder: Banner1.\"><br>
 		<b>$banner1_message</b><hr>
-		<med-blue>You are connected to <br>$client_zone</med-blue><br>
+		<med-blue>Você está conectado em: <br>$client_zone</med-blue><br>
 		<italic-black>
-			To access the Internet you must Accept the Terms of Service.
+			Para acessar a internet você precisa aceitar os Termos de Serviço.
 		</italic-black>
 		<hr>
 		<form action=\"/opennds_preauth/\" method=\"get\">
@@ -147,12 +149,12 @@ thankyou_page () {
 
 	echo "
 		<big-red>
-			Thankyou for using this service.<br>Please click Continue for access.
+			Obrigado por usar nossos serviços.<br>Por favor click Continue para acessar.
 		</big-red>
 		<br>
-		<b>Welcome</b>
+		<b>Bem Vindo !</b>
 		<br>
-		<med-blue>You are connected to $client_zone</med-blue><br>
+		<med-blue>Você está conectado em $client_zone</med-blue><br>
 	"
 
 	# Add your message here:
@@ -162,7 +164,7 @@ thankyou_page () {
 	if [ -e "$mountpoint/ndsdata/advert1.htm" ]; then
 		advert1=$(cat "$mountpoint/ndsdata/advert1.htm")
 	else
-		advert1="Your News or Advertising could be here, contact the owners of this Hotspot to find out how!"
+		advert1="Sua notícia ou publicidade pode estar aqui. Entre em contato com os proprietários deste Hotspot para saber como!"
 	fi
 
 	echo "
@@ -218,7 +220,7 @@ landing_page() {
 	auth_success="
 		<p>
 			<big-red>
-				You are now logged in and have been granted access to the Internet.
+				Você está agora logado e recebeu acesso à Internet.
 			</big-red>
 			<hr>
 			<img style=\"width:100%; max-width: 100%;\" src=\"$banner3\" alt=\"Placeholder: Banner3.\"><br>
@@ -227,12 +229,10 @@ landing_page() {
 		<hr>
 		<p>
 			<italic-black>
-				You can use your Browser, Email and other network Apps as you normally would.
+				Você pode usar seu navegador, e-mail e outros aplicativos de rede normalmente.
 			</italic-black>
-
-			(Your device originally requested $originurl)
 			<hr>
-			Click or tap Continue to show the status of your account.
+			Clique ou toque em Continuar para exibir o status da sua conta.
 		</p>
 		<form>
 			<input type=\"button\" VALUE=\"Continue\" onClick=\"location.href='$gatewayurl'\" >
@@ -242,7 +242,7 @@ landing_page() {
 	auth_fail="
 		<p>
 			<big-red>
-				Something went wrong and you have failed to log in.
+				Algo deu errado e você não conseguiu fazer login.
 			</big-red>
 			<hr>
 			<img style=\"width:100%; max-width: 100%;\" src=\"$banner3\" alt=\"Placeholder: Banner1.\"><br>
@@ -251,12 +251,12 @@ landing_page() {
 
 		<p>
 			<italic-black>
-				Your login attempt probably timed out.
+				Sua tentativa de login provavelmente expirou.
 			</italic-black>
 		</p>
 		<p>
 			<br>
-			Click or tap Continue to try again.
+			Clique ou toque em Continuar para tentar novamente.
 		</p>
 		<form>
 			<input type=\"button\" VALUE=\"Continue\" onClick=\"location.href='http://$gatewayfqdn'\" >
@@ -297,23 +297,38 @@ display_terms() {
 
 	#Privacy
 	echo "
-		<b style=\"color:red;\">Privacy.</b><br>
+		<b style=\"color:red;\">Privacidade.</b><br>
 		<b>
-			By logging in to the system, you grant your permission for this system to store any data you provide for
-			the purposes of logging in, along with the networking parameters of your device that the system requires to function.<br>
-			All information is stored for your convenience and for the protection of both yourself and us.<br>
-			All information collected by this system is stored in a secure manner and is not accessible by third parties.<br>
-			In return, we grant you FREE Internet access.
+			Ao fazer login no sistema, você concede permissão para que este sistema armazene quaisquer dados que você fornecer para fins de login, juntamente com os parâmetros de rede do seu dispositivo que o sistema necessita para funcionar.
+			Todas as informações são armazenadas para sua conveniência e para a proteção tanto sua quanto nossa.
+			Todas as informações coletadas por este sistema são armazenadas de forma segura e não são acessíveis por terceiros.
+			Em troca, concedemos a você acesso gratuito à Internet.
 		</b><hr>
 	"
 
 	# Terms of Service
 	echo "
-		<b style=\"color:red;\">Terms of Service for this Hotspot.</b> <br>
+		<b style=\"color:red;\">Termo de Aceite para Utilização do Serviço Wi-Fi.</b> <br>
 
-		<b>Access is granted on a basis of trust that you will NOT misuse or abuse that access in any way.</b><hr>
+		<p>O serviço Wi-Fi é provido e de responsabilidade da Associação Administradora da Conectividade de Escolas EACE, inscrita no CNPJ/MF sob o N. 45.726.363/0001-47.
 
-		<b>Please scroll down to read the Terms of Service in full or click the Continue button to return to the Acceptance Page</b>
+		Este aviso de privacidade possui o objetivo de apresentar como a EACE realiza o tratamento de dados pessoais coletados pelo serviço Wi-Fi na instituição, de acordo com as diretrizes da Lei Federal 13.709/18 - Lei Geral de Proteção de Dados.
+
+		Tratamentos de Dados Pessoais Realizados pelo Serviço Wi-Fi
+
+		Para que você possa acessar a internet através do serviço Wi-Fi, são coletados alguns dados pessoais para fins de registros de conexão e outros requisitos previstos no Marco Civil da Internet (Lei 12.965/2014) e demais legislações 
+		
+		brasileiras aplicáveis. 
+		
+		Alguns desses dados também podem ser utilizados com o propósito de gerar estatísticas de operação e uso do serviço de forma anonimizada.
+
+		São coletados dados como nome, e-mail, endereço IP da conexão, tipo, sistema operacional e endereço físico do dispositivo móvel, rede sem fio utilizada, data, hora, destino e duração das conexões.
+
+		A EACE não realiza o compartilhamento dos dados pessoais com terceiros, contudo, em casos que seja destinatária de requisições de informações solicitadas por autoridades competentes, os dados pessoais 
+		
+		poderão ser compartilhados com estes órgãos, com fins de cumprimento de medidas legais ou regulatórias.</p><hr>
+
+		<b>Ao prosseguir, declaro estar ciente das condições de tratamento dos meus dados pessoais, conforme descrito no aviso de privacidade do serviço Wi-Fi na instituição.</b>
 
 		<form>
 			<input type=\"button\" VALUE=\"Continue\" onClick=\"history.go(-1);return true;\">
@@ -322,129 +337,83 @@ display_terms() {
 
 	# Proper Use
 	echo "
-		<hr>
-		<b>Proper Use</b>
-
-		<p>
-			This Hotspot provides a wireless network that allows you to connect to the Internet. <br>
-			<b>Use of this Internet connection is provided in return for your FULL acceptance of these Terms Of Service.</b>
-		</p>
-
-		<p>
-			<b>You agree</b> that you are responsible for providing security measures that are suited for your intended use of the Service.
-			For example, you shall take full responsibility for taking adequate measures to safeguard your data from loss.
-		</p>
-
-		<p>
-			While the Hotspot uses commercially reasonable efforts to provide a secure service,
-			the effectiveness of those efforts cannot be guaranteed.
-		</p>
-
-		<p>
-			<b>You may</b> use the technology provided to you by this Hotspot for the sole purpose
-			of using the Service as described here.
-			You must immediately notify the Owner of any unauthorized use of the Service or any other security breach.<br><br>
-			We will give you an IP address each time you access the Hotspot, and it may change.
-			<br>
-			<b>You shall not</b> program any other IP or MAC address into your device that accesses the Hotspot.
-			You may not use the Service for any other reason, including reselling any aspect of the Service.
-			Other examples of improper activities include, without limitation:
-		</p>
-
-			<ol>
-				<li>
-					downloading or uploading such large volumes of data that the performance of the Service becomes
-					noticeably degraded for other users for a significant period;
-				</li>
-
-				<li>
-					attempting to break security, access, tamper with or use any unauthorized areas of the Service;
-				</li>
-
-				<li>
-					removing any copyright, trademark or other proprietary rights notices contained in or on the Service;
-				</li>
-
-				<li>
-					attempting to collect or maintain any information about other users of the Service
-					(including usernames and/or email addresses) or other third parties for unauthorized purposes;
-				</li>
-
-				<li>
-					logging onto the Service under false or fraudulent pretenses;
-				</li>
-
-				<li>
-					creating or transmitting unwanted electronic communications such as SPAM or chain letters to other users
-					or otherwise interfering with other user's enjoyment of the service;
-				</li>
-
-				<li>
-					transmitting any viruses, worms, defects, Trojan Horses or other items of a destructive nature; or
-				</li>
-
-				<li>
-					using the Service for any unlawful, harassing, abusive, criminal or fraudulent purpose.
-				</li>
-			</ol>
+		<hr> **Uso Adequado** 
+		<p> Este Hotspot fornece uma rede sem fio que permite a conexão à Internet. 
+		<b>O uso desta conexão à Internet é fornecido em troca da sua TOTAL aceitação destes Termos de Serviço.</b> ]
+		</p> 
+		<p> <b>Você concorda</b> 
+		que é responsável por adotar medidas de segurança adequadas para o uso pretendido do Serviço. Por exemplo, você assume total responsabilidade por tomar medidas adequadas para proteger seus dados contra perdas. 
+		</p> 
+		<p> 
+		Embora o Hotspot utilize esforços comercialmente razoáveis para fornecer um serviço seguro, a eficácia dessas medidas não pode ser garantida. 
+		</p> 
+		<p> 
+		<b>Você pode</b> 
+		usar a tecnologia fornecida por este Hotspot exclusivamente para o uso do Serviço conforme descrito aqui. Você deve notificar imediatamente o Proprietário sobre qualquer uso não autorizado do Serviço ou qualquer outra violação de segurança. <br><br> 
+		Cada vez que você acessar o Hotspot, será atribuído um endereço IP, que pode mudar. <br> 
+		<b>Você não deve</b> 
+		programar qualquer outro endereço IP ou MAC em seu dispositivo para acessar o Hotspot. Você também não pode usar o Serviço para qualquer outro fim, incluindo revender qualquer aspecto do Serviço. Outros exemplos de atividades indevidas incluem, entre outros: 
+		</p> 
+		<ol> 
+		<li>Baixar ou enviar grandes volumes de dados que degradem significativamente o desempenho do Serviço para outros usuários por um período prolongado;
+		</li> 
+		<li>Tentar violar a segurança, acessar, adulterar ou usar qualquer área não autorizada do Serviço;</li> <li>Remover quaisquer avisos de direitos autorais, marcas registradas ou outros direitos de propriedade contidos no Serviço;
+		</li> 
+		<li>Tentar coletar ou manter informações sobre outros usuários do Serviço (incluindo nomes de usuário e/ou endereços de e-mail) ou terceiros para fins não autorizados;
+		</li> 
+		<li>Fazer login no Serviço sob falsas pretensões ou de forma fraudulenta;
+		</li> 
+		<li>Criar ou transmitir comunicações eletrônicas indesejadas, como SPAM ou correntes, para outros usuários ou interferir no uso do serviço por outros usuários;
+		</li> 
+		<li>Transmitir vírus, worms, defeitos, Cavalos de Troia ou outros elementos de natureza destrutiva;
+		</li> 
+		<li>Usar o Serviço para qualquer finalidade ilegal, assediosa, abusiva, criminosa ou fraudulenta.
+		</li> 
+		</ol>
 	"
 
 	# Content Disclaimer
 	echo "
-		<hr>
-		<b>Content Disclaimer</b>
-
-		<p>
-			The Hotspot Owners do not control and are not responsible for data, content, services, or products
-			that are accessed or downloaded through the Service.
-			The Owners may, but are not obliged to, block data transmissions to protect the Owner and the Public.
+		<hr> **Isenção de Responsabilidade sobre Conteúdo** 
+		<p> Os Proprietários do Hotspot não controlam e não são responsáveis por dados, conteúdos, serviços ou produtos acessados ou baixados por meio do Serviço. Os Proprietários podem, mas não são obrigados a, bloquear transmissões de dados para proteger a si mesmos e ao público. 
 		</p>
-
-		The Owners, their suppliers and their licensors expressly disclaim to the fullest extent permitted by law,
-		all express, implied, and statutary warranties, including, without limitation, the warranties of merchantability
-		or fitness for a particular purpose.
+		
+		Os Proprietários, seus fornecedores e licenciadores rejeitam expressamente, na máxima extensão permitida por lei,
+		
+		todas as garantias expressas, implícitas e legais, incluindo, sem limitação, garantias de comercialização
+		
+		ou adequação para um propósito específico.
+		
 		<br><br>
-		The Owners, their suppliers and their licensors expressly disclaim to the fullest extent permitted by law
-		any liability for infringement of proprietory rights and/or infringement of Copyright by any user of the system.
-		Login details and device identities may be stored and be used as evidence in a Court of Law against such users.
+		Os Proprietários, seus fornecedores e licenciadores rejeitam expressamente, na máxima extensão permitida por lei,
+		qualquer responsabilidade por infração de direitos de propriedade e/ou violação de direitos autorais por qualquer usuário do sistema.
+		Os detalhes de login e as identidades dos dispositivos podem ser armazenados e utilizados como prova em um Tribunal de Justiça contra tais usuários.
+		
 		<br>
 	"
 
 	# Limitation of Liability
 	echo "
 
-		<hr><b>Limitation of Liability</b>
-
-		<p>
-			Under no circumstances shall the Owners, their suppliers or their licensors be liable to any user or
-			any third party on account of that party's use or misuse of or reliance on the Service.
-		</p>
-
-		<hr><b>Changes to Terms of Service and Termination</b>
-
-		<p>
-			We may modify or terminate the Service and these Terms of Service and any accompanying policies,
-			for any reason, and without notice, including the right to terminate with or without notice,
-			without liability to you, any user or any third party. Please review these Terms of Service
-			from time to time so that you will be apprised of any changes.
-		</p>
-
-		<p>
-			We reserve the right to terminate your use of the Service, for any reason, and without notice.
-			Upon any such termination, any and all rights granted to you by this Hotspot Owner shall terminate.
-		</p>
+		<hr> **Limitação de Responsabilidade** 
+		
+		<p> Em nenhuma circunstância os Proprietários, seus fornecedores ou licenciadores serão responsáveis perante qualquer usuário ou terceiro pelo uso indevido ou pela confiança no Serviço. </p> 
+		
+		<hr> **Alterações aos Termos de Serviço e Rescisão** 
+		
+		<p> Podemos modificar ou encerrar o Serviço, bem como estes Termos de Serviço e quaisquer políticas associadas, por qualquer motivo e sem aviso prévio, incluindo o direito de encerramento com ou sem aviso, sem qualquer responsabilidade para com você, qualquer usuário ou terceiros. Revise estes Termos de Serviço periodicamente para estar ciente de quaisquer alterações. </p> 
+		
+		<p> Reservamo-nos o direito de encerrar seu uso do Serviço, por qualquer motivo e sem aviso prévio. Com tal rescisão, todos os direitos concedidos a você pelo Proprietário deste Hotspot serão revogados. </p>
 	"
 
 	# Indemnity
 	echo "
-		<hr><b>Indemnity</b>
-
-		<p>
-			<b>You agree</b> to hold harmless and indemnify the Owners of this Hotspot,
-			their suppliers and licensors from and against any third party claim arising from
-			or in any way related to your use of the Service, including any liability or expense arising from all claims,
-			losses, damages (actual and consequential), suits, judgments, litigation costs and legal fees, of every kind and nature.
-		</p>
+		<hr> **Indenização** 
+		
+		<p> **Você concorda** em isentar e indenizar os Proprietários deste Hotspot, seus fornecedores e licenciadores 
+		de qualquer reclamação de terceiros decorrente ou de alguma forma relacionada ao seu uso do Serviço, incluindo qualquer 
+		responsabilidade ou despesa resultante de todas as reclamações, perdas, danos (reais e consequenciais), processos, julgamentos, custos de litígio e honorários advocatícios, 
+		de qualquer tipo e natureza. </p>
 
 		<hr>
 		<form>
