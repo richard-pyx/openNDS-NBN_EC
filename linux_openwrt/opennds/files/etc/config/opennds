@@ -200,8 +200,8 @@ config opennds
 	# theme_user-email-login-custom-placeholders
 	#
 	#list fas_custom_images_list 'logo_png=https://openwrt.org/_media/logo.png'
-	list fas_custom_images_list 'banner1_jpg=https://cloud.nbntelecom.com.br/index.php/s/dlOaX7wQPp68x4x/download?path=%2F&files=escolas%20conectadas%20e%20fust%20horizontal%20460x460%20transparente(1).jpg'
-	list fas_custom_images_list 'banner2_jpg=https://cloud.nbntelecom.com.br/index.php/s/dlOaX7wQPp68x4x/download?path=%2F&files=rodap%C3%A9%20600x80%20transparente.jpg'
+	list fas_custom_images_list 'banner1_jpg=https://raw.githubusercontent.com/openNDS/openNDS/v1.0.0/resources/fust.jpg'
+	list fas_custom_images_list 'banner2_jpg=https://raw.githubusercontent.com/openNDS/openNDS/v1.0.0/resources/parcerias.jpg'
 	list fas_custom_images_list 'banner3_jpg=https://i0.wp.com/capivaraalternativa.com.br/wp-content/uploads/2024/04/CASULO-PARA-ENTREVISTAS.jpg'
 	#
 	###########################################################################################
