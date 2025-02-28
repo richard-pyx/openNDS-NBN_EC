@@ -6,11 +6,11 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=opennds-nbn_ec
-PKG_VERSION:=10.0.0
+PKG_VERSION:=1.0.1
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
-PKG_SOURCE_URL:=https://github.com/richard-pyx/openNDS-NBN_EC/archive/refs/tags/v1.0.0
+PKG_SOURCE_URL:=https://github.com/richard-pyx/openNDS-NBN_EC/archive/refs/tags/v1.0.1
 PKG_HASH:=#shasum -a 256 of tar.gz of source files goes here
 PKG_BUILD_DIR:=$(BUILD_DIR)/openNDS-$(PKG_VERSION)
 
