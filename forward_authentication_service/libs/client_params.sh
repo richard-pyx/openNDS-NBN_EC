@@ -175,9 +175,9 @@ footer() {
 	year=$(date +'%Y')
 	echo "
 		<hr>
-		<div style=\"font-size:0.5em;\">
+		<div style=\"font-size:0.5em; max-width:100% display:flex; justify-content: center; flex-direction: column;\">
 			<br>
-			<img style=\"height:60px; float:left;\" src=\"$url/ndsremote/banner2.jpg\" alt=\"Splash Page: For access to the Internet.\">
+			<img style=\"height:60px; width:80%;\" src=\"$url/ndsremote/banner2.jpg\" alt=\"Splash Page: For access to the Internet.\">
 			&copy; Portal: NBN Telecom - 2005 - $year<br>
 			<br>
 			Portal Version: $version
