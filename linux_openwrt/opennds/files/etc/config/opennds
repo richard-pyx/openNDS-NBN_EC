@@ -337,7 +337,7 @@ config opennds
 	# Instead use:
 	# option gatewayname 'Bill&#39;s WiFi'
 	#
-	#option gatewayname 'My Captive Portal'
+	option gatewayname 'Escolas Conectadas'
 	###########################################################################################
 
 	# Serial Number Suffix Enable
