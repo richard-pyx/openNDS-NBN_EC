@@ -199,9 +199,9 @@ config opennds
 	# theme_user-email-login-custom-placeholders
 	#
 	#list fas_custom_images_list 'logo_png=https://openwrt.org/_media/logo.png'
-	list fas_custom_images_list 'banner1_jpg=https://raw.githubusercontent.com/richard-pyx/openNDS-NBN_EC/v1.0.1/resources/fust.jpg'
-	list fas_custom_images_list 'banner2_jpg=https://raw.githubusercontent.com/richard-pyx/openNDS-NBN_EC/v1.0.1/resources/parcerias.jpg'
-	list fas_custom_images_list 'banner3_jpg=https://i0.wp.com/capivaraalternativa.com.br/wp-content/uploads/2024/04/CASULO-PARA-ENTREVISTAS.jpg'
+	list fas_custom_images_list 'banner1_jpg=https://raw.githubusercontent.com/richard-pyx/openNDS-NBN_EC/v1.0.3/resources/fust.jpg'
+	list fas_custom_images_list 'banner2_jpg=https://raw.githubusercontent.com/richard-pyx/openNDS-NBN_EC/v1.0.3/resources/parcerias.jpg'
+	#list fas_custom_images_list 'banner3_jpg=https://raw.githubusercontent.com/richard-pyx/openNDS-NBN_EC/v1.0.3/resources/fust.jpg'
 	#
 	###########################################################################################
 
