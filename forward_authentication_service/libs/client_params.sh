@@ -175,9 +175,9 @@ footer() {
 	year=$(date +'%Y')
 	echo "
 		<hr>
-		<div style=\"font-size:0.5em; max-width:100% display:flex; justify-content: center; flex-direction: column;\">
+		<div style=\"font-size:0.5em; max-width:100%; display:flex; justify-content: center; flex-direction: column;\">
 			<br>
-			<img style=\"height:60px; width:80%;\" src=\"$url/ndsremote/banner2.jpg\" alt=\"Splash Page: For access to the Internet.\">
+			<img style=\"height:60px; width:80%; max-width:100%;\" src=\"$url/ndsremote/banner2.jpg\" alt=\"Splash Page: For access to the Internet.\">
 			&copy; Portal: NBN Telecom - 2005 - $year<br>
 			<br>
 			Portal Version: $version
@@ -195,9 +195,9 @@ body() {
 	if [ "$ndsstatus" = "busy" ]; then
 		pagebody="
 			<hr>
-			<b>O portal está ocupado, por favor, clique ou toque. \"Refresh\"<br><br></b>
+			<b>O portal está ocupado, por favor, clique ou toque. \"Recarregar\"<br><br></b>
 			<form>
-				<input type=\"button\" VALUE=\"Refresh\" onClick=\"history.go(0);return true;\">
+				<input type=\"button\" VALUE=\"Recarregar\" onClick=\"history.go(0);return true;\">
 			</form>
 		"
 	elif [ "$status" = "status" ]; then
@@ -216,7 +216,7 @@ body() {
 
 		buttons="
 			<form action=\"$url/opennds_deny/\" method=\"get\">
-				<input type=\"submit\" value=\"Logout\" >
+				<input type=\"submit\" value=\"Sair\" >
 			</form>
 
 			<hr>
@@ -224,7 +224,7 @@ body() {
 			<form action=\"$url/\" method=\"get\">
 				<input type=\"checkbox\" value=\"checked\" name=\"advanced\" $checked >
 				Selecione e clique em Atualizar para ver os Detalhes Avançados da Conta.<br>
-				<input type=\"submit\" value=\"Refresh\" >
+				<input type=\"submit\" value=\"Recarregar\" >
 			</form>
 		"
 

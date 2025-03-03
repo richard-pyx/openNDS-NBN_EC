@@ -69,9 +69,9 @@ footer() {
 	year=$(date +'%Y')
 	echo "
 		<hr>
-		<div style=\"font-size:0.5em; max-width:100% display:flex; justify-content: center; flex-direction: column;\">
+		<div style=\"font-size:0.5em; max-width:100%; display:flex; justify-content: center; flex-direction: column;\">
 			<br>
-			<img style=\"height:60px; width:80%;\" src=\"$gatewayurl""$banner2\" alt=\"Splash Page: For access to the Internet.\">
+			<img style=\"height:60px; max-width:100%; width:80%;\" src=\"$gatewayurl""$banner2\" alt=\"Splash Page: For access to the Internet.\">
 			&copy; Portal: NBN Telecom - 2005 - $year<br>
 			<br>
 			Portal Version: $version
@@ -110,8 +110,6 @@ continue_form() {
 
 	echo "
 		<big-red>Bem Vindo!</big-red><br>
-		<img style=\"width:30%; max-width: 100%;\" src=\"$gatewayurl""$banner1\" alt=\"Placeholder: Banner1.\"><br>
-		<b>$banner1_message</b><hr>
 		<med-blue>Você está conectado em: <br>$client_zone</med-blue><br>
 		<italic-black>
 			Para acessar a internet você precisa aceitar os Termos de Serviço.
@@ -164,14 +162,12 @@ thankyou_page () {
 	if [ -e "$mountpoint/ndsdata/advert1.htm" ]; then
 		advert1=$(cat "$mountpoint/ndsdata/advert1.htm")
 	else
-		advert1="Sua notícia ou publicidade pode estar aqui. Entre em contato com os proprietários deste Hotspot para saber como!"
+		advert1=""
 	fi
 
 	echo "
 		<br>
 		<italic-black>
-			<img style=\"width:50%; max-width: 100%;\" src=\"$gatewayurl""$banner1\" alt=\"Placeholder: Banner2.\"><br>
-			<b>Fust Escolas conectadas</b><br>
 			$advert1
 			<hr>
 		</italic-black>
@@ -223,8 +219,6 @@ landing_page() {
 				Você está agora logado e recebeu acesso à Internet.
 			</big-red>
 			<hr>
-			<img style=\"width:30%; max-width: 100%;\" src=\"$gatewayurl""$banner1\" alt=\"Placeholder: Banner3.\"><br>
-			<b>$banner1_message</b><br>
 		</p>
 		<hr>
 		<p>
@@ -245,8 +239,6 @@ landing_page() {
 				Algo deu errado e você não conseguiu fazer login.
 			</big-red>
 			<hr>
-			<img style=\"width:30%; max-width: 100%;\" src=\"$gatewayurl""$banner1\" alt=\"Placeholder: Banner1.\"><br>
-			<b>$banner1_message</b><br>
 		</p>
 
 		<p>
@@ -307,7 +299,7 @@ display_terms() {
 			Todas as informações coletadas por este sistema são armazenadas de forma segura e não são acessíveis por terceiros.
 			Em troca, concedemos a você acesso gratuito à Internet.
 		</b>
-		
+
 		</div>
 		<hr>
 	"
