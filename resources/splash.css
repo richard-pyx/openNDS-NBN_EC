@@ -28,7 +28,7 @@
 
 	.insert {
 		background: rgba(350, 350, 350, 0.7);
-		border: 2px solid #aaa;
+		/*border: 2px solid #aaa; */
 		border-radius: 10px;
 		min-width:200px;
 		max-width:100%;
@@ -41,7 +41,7 @@
 	}
 
 	img {
-		width: 40%;
+		width: 100%;
 		max-width: 180px;
 		margin-left: 0%;
 		margin-right: 10px;
@@ -63,7 +63,7 @@
 		font-weight: bold;
 		border: 0;
 		border-radius: 10px;
-		background-color: #1a7856;
+		background-color: green;
 		padding: 0 10px;
 		color: #fff;
 		cursor: pointer;
