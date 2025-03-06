@@ -153,7 +153,7 @@ header() {
 		<meta http-equiv=\"Expires\" content=\"0\">
 		<meta charset=\"utf-8\">
 		<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
-		<link rel=\"shortcut icon\" href=\"$url/ndsremote/banner1.jpg\" type=\"image/x-icon\">
+		<link rel=\"shortcut icon\" href=\"$url/images/fust.jpg\" type=\"image/x-icon\">
 		<link rel=\"stylesheet\" type=\"text/css\" href=\"$url/splash.css\">
 		<title>$gatewaynamehtml Cliente Seção Status</title>
 		</head>
@@ -177,7 +177,7 @@ footer() {
 		<hr>
 		<div style=\"font-size:0.5em; max-width:100%; display:flex; justify-content: center; flex-direction: column;\">
 			<br>
-			<img style=\"height:60px; width:80%; max-width:100%;\" src=\"$url/ndsremote/banner2.jpg\" alt=\"Splash Page: For access to the Internet.\">
+			<img style=\"height:60px; width:80%; max-width:100%;\" src=\"$url/images/banner2.jpg\" alt=\"Splash Page: For access to the Internet.\">
 			&copy; Portal: NBN Telecom - 2005 - $year<br>
 			<br>
 			Portal Version: $version

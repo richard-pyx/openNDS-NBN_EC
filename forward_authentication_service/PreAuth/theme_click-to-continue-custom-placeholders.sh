@@ -49,7 +49,7 @@ header() {
 		<meta http-equiv=\"Expires\" content=\"0\">
 		<meta charset=\"utf-8\">
 		<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
-		<link rel=\"shortcut icon\" href=\"$gatewayurl/ndsremote/banner1.jpg\" type=\"image/x-icon\">
+		<link rel=\"shortcut icon\" href=\"$gatewayurl/images/fust.jpg\" type=\"image/x-icon\">
 		<link rel=\"stylesheet\" type=\"text/css\" href=\"$gatewayurl/splash.css\">
 		<title>$gatewayname</title>
 		</head>
@@ -59,7 +59,7 @@ header() {
 			$gatewayname <br>
 		</med-blue>
 		<div class=\"insert\" style=\"max-width:100%;\">
-		<img src=\"$gatewayurl""$banner1\" alt=\"Placeholder: Logo.\"><br>
+		<img src=\"$gatewayurl/images/fust.jpg\" alt=\"Placeholder: Logo.\"><br>
 		<b>$logo_message</b><br>
 	"
 }
@@ -71,7 +71,7 @@ footer() {
 		<hr>
 		<div style=\"font-size:0.5em; max-width:100%; display:flex; justify-content: center; flex-direction: column;\">
 			<br>
-			<img style=\"height:60px; max-width:100%; width:80%;\" src=\"$gatewayurl""$banner2\" alt=\"Splash Page: For access to the Internet.\">
+			<img style=\"height:60px; max-width:100%; width:80%;\" src=\"$gatewayurl/images/parcerias.jpg\" alt=\"Splash Page: For access to the Internet.\">
 			&copy; Portal: NBN Telecom - 2005 - $year<br>
 			<br>
 			Portal Version: $version
