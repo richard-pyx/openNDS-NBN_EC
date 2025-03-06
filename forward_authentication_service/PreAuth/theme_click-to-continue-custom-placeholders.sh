@@ -468,8 +468,8 @@ session_length="0"
 # Set Rate and Quota values for the client
 # The session length, rate and quota values could be determined by this script, on a per client basis.
 # rates are in kb/s, quotas are in kB. - if set to 0 then defaults to global value).
-upload_rate="0"
-download_rate="0"
+upload_rate="5000"
+download_rate="5000"
 upload_quota="0"
 download_quota="0"
 
