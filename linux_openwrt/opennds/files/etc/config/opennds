@@ -304,7 +304,7 @@ config opennds
 	# The selected interface must be allocated an IPv4 address.
 	# In OpenWrt this is normally br-lan, in generic Linux it might be something else.
 	#
-	option gatewayinterface 'br-lan'
+	option gatewayinterface 'br-lan.255'
 	###########################################################################################
 
 	# GatewayPort
