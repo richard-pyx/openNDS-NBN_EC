@@ -155,7 +155,7 @@ header() {
 		<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
 		<link rel=\"shortcut icon\" href=\"$url/images/fust.jpg\" type=\"image/x-icon\">
 		<link rel=\"stylesheet\" type=\"text/css\" href=\"$url/splash.css\">
-		<title>$gatewaynamehtml Cliente Seção Status</title>
+		<title>Escolas Conectadas Cliente Status</title>
 		</head>
 		<body>
 		<div class=\"offset\">
@@ -163,7 +163,7 @@ header() {
 			Seção Status<br>
 		</big-red>
 		<med-blue>
-			$gatewaynamehtml
+	
 		</med-blue><br>
 		<div class=\"insert\" style=\"max-width:100%;\">
 	"

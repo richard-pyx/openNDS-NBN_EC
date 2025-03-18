@@ -51,12 +51,12 @@ header() {
 		<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
 		<link rel=\"shortcut icon\" href=\"$gatewayurl/images/fust.jpg\" type=\"image/x-icon\">
 		<link rel=\"stylesheet\" type=\"text/css\" href=\"$gatewayurl/splash.css\">
-		<title>$gatewayname</title>
+		<title>Escolas Conectadas</title>
 		</head>
 		<body>
 		<div class=\"offset\">
 		<med-blue>
-			$gatewayname <br>
+			 <br>
 		</med-blue>
 		<div class=\"insert\" style=\"max-width:100%;\">
 		<img src=\"$gatewayurl/images/fust.jpg\" alt=\"Placeholder: Logo.\"><br>
@@ -110,7 +110,7 @@ continue_form() {
 
 	echo "
 		<big-red>Bem Vindo!</big-red><br>
-		<med-blue>Você está conectado em: <br>$client_zone</med-blue><br>
+		
 		<italic-black>
 			Para acessar a internet você precisa aceitar os Termos de Serviço.
 		</italic-black>
@@ -152,7 +152,7 @@ thankyou_page () {
 		<br>
 		<b>Bem Vindo !</b>
 		<br>
-		<med-blue>Você está conectado em $client_zone</med-blue><br>
+		<med-blue>Você está conectado</med-blue><br>
 	"
 
 	# Add your message here:
@@ -220,7 +220,6 @@ landing_page() {
 			</big-red>
 			<hr>
 		</p>
-		<hr>
 		<p>
 			<italic-black>
 				Você pode usar seu navegador, e-mail e outros aplicativos de rede normalmente.
