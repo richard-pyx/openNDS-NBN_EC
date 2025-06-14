@@ -1,3 +1,8 @@
+## About this fork
+
+This repository contains a custom implementation of openNDS, tailored for a private captive portal project. The solution was deployed on OpenWRT-powered devices, which were widely distributed to municipal schools throughout the state of Amazonas.
+
+---
 ## 1. The openNDS project
 
 openNDS (open Network Demarcation Service) is a high performance, small footprint, Captive Portal.
